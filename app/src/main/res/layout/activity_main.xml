@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+    <RelativeLayout
+        android:id="@+id/android_sma"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2FAE9"
+        android:clipToOutline="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-16dp">
+
+        <!-- Auto layout, variables, and unit scale are not yet supported -->
+
+        <TextView
+            android:id="@+id/tell_us_abo"
+            android:layout_width="225dp"
+            android:layout_height="49dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="150.7dp"
+            android:gravity="top"
+            android:text="@string/tell_us_abo"
+
+            android:textAppearance="@style/tell_us_abo"
+            app:fontFamily="@font/quicksand" />
+
+        <TextView
+            android:id="@+id/yourself"
+            android:layout_width="144dp"
+            android:layout_height="49dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="252dp"
+            android:layout_marginTop="27dp"
+            android:elevation="100dp"
+            android:gravity="top"
+            android:text="@string/yourself"
+            android:textAppearance="@style/yourself"
+            app:fontFamily="@font/quicksand" />
+
+
+        <EditText
+            android:id="@+id/edittext_1"
+            android:layout_width="304dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="11.42dp"
+            android:layout_marginTop="144dp"
+            android:background="@drawable/edittext_1"
+            android:hint="Name"
+            android:textSize="24dp"
+            app:fontFamily="@font/quicksand" />
+
+        <EditText
+            android:id="@+id/edittext_2"
+
+            android:layout_width="304dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="231dp"
+            android:background="@drawable/edittext_1"
+            android:inputType="numberSigned"
+            android:hint="Age"
+            android:textSize="24dp"
+            app:fontFamily="@font/quicksand" />
+
+        <EditText
+            android:id="@+id/edittext_3"
+            android:layout_width="304dp"
+            android:layout_height="60dp"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="320dp"
+            android:background="@drawable/edittext_1"
+            android:inputType="number"
+            android:hint="Weight"
+            android:textSize="24dp"
+            app:fontFamily="@font/quicksand" />
+
+        <EditText
+            android:id="@+id/edittext_4"
+            android:layout_width="304dp"
+
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="409dp"
+            android:background="@drawable/edittext_1"
+            android:inputType="number"
+            android:hint="Height"
+            android:textSize="24dp" />
+
+        <EditText
+            android:id="@+id/edittext_5"
+            android:layout_width="304dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="497dp"
+            android:background="@drawable/edittext_1"
+            android:elevation="1dp"
+            android:hint="Gender"
+            android:textSize="24dp" />
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="242dp"
+            android:layout_marginTop="591dp"
+            android:background="@drawable/next_button"
+            android:text="Next"
+            android:textSize="24sp" />
+
+        <View
+            android:id="@+id/star_1"
+            android:layout_width="209dp"
+            android:layout_height="178dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="227dp"
+            android:layout_marginTop="-2dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/star_1" />
+
+        <View
+            android:id="@+id/star_2"
+            android:layout_width="200dp"
+            android:layout_height="190dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="552dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/star_2" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

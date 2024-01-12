@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="yourself">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">#510F2E</item>
+    </style>
+    <style name="tell_us_abo">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">#0F5132</item>
+    </style>
+    <style name="what_are_yo">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">#0F5132</item>
+    </style>
+    <style name="pick_a_time">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">#0F5132</item>
+    </style>
+    <style name="your_journe">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">#510F2E</item>
+    </style>
+</resources>

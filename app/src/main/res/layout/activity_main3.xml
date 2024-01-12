@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2FAE9"
+    tools:context=".MainActivity3">
+
+    <TextView
+        android:id="@+id/pick_a_time"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:gravity="top"
+        android:text="@string/pick_a_time"
+        android:textAppearance="@style/pick_a_time"
+        app:fontFamily="@font/quicksand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/your_journe"
+        android:layout_width="202dp"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="68dp"
+        android:gravity="top"
+        android:text="@string/your_journe"
+        android:textAppearance="@style/your_journe"
+        app:fontFamily="@font/quicksand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioExer"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="350dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioButton
+            android:id="@+id/sedentary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_1"
+            android:text="Sedentary active"
+            android:textSize="24dp"
+            app:fontFamily="@font/quicksand" />
+
+        <RadioButton
+            android:id="@+id/light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_1"
+            android:text="Lightly Active"
+            android:textSize="24dp"
+            app:fontFamily="@font/quicksand" />
+
+        <RadioButton
+            android:id="@+id/medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_1"
+            android:text="Moderatly Active"
+            android:textSize="24dp"
+
+            app:fontFamily="@font/quicksand" />
+
+        <RadioButton
+            android:id="@+id/active"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_1"
+            android:text="Very active"
+            android:textSize="24dp"
+
+            app:fontFamily="@font/quicksand" />
+
+    </RadioGroup>
+
+
+
+    <Button
+        android:id="@+id/next2"
+        android:layout_width="125dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="248dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/next_button"
+        android:text="Next"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="208dp"
+        android:background="@drawable/edittext_1"
+        android:hint="Enter date (dd/MM/yyyy)"
+        android:inputType="date"
+        android:textSize="24dp"
+        app:fontFamily="@font/quicksand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ResultText"
+        android:layout_width="304dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="144dp"
+        app:fontFamily="@font/quicksand"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

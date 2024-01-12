@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2FAE9"
+    tools:context=".MainActivity2">
+
+    <ImageView
+        android:id="@+id/frame_1"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/frame_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/next2"
+        android:layout_width="125dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="284dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/next_button"
+        android:text="Next"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/edittext_5"
+        app:fontFamily="@font/quicksand"
+        android:layout_width="304dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="416dp"
+        android:background="@drawable/edittext_1"
+        android:elevation="1dp"
+        android:inputType=""
+        android:hint="Goal-Weight"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Goals"
+        android:layout_width="144dp"
+        android:layout_height="49dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:elevation="100dp"
+        android:gravity="top"
+        android:text="@string/goals"
+        app:fontFamily="@font/quicksand"
+        android:textAppearance="@style/yourself"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/what_are_yo"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        app:fontFamily="@font/quicksand"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        android:gravity="top"
+        android:text="@string/what_are_yo"
+        android:textAppearance="@style/what_are_yo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGoals"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="150dp"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioButton
+            android:id="@+id/WeightLoss"
+            android:layout_width="match_parent"
+            app:fontFamily="@font/quicksand"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_1"
+            android:text="Weight Loss"
+            android:textSize="24dp" />
+
+        <RadioButton
+            android:id="@+id/WeightMaintenance"
+            android:layout_width="match_parent"
+            app:fontFamily="@font/quicksand"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_1"
+            android:text="Weight Maintenance"
+            android:textSize="24dp" />
+
+        <RadioButton
+            android:id="@+id/WeightGain"
+            android:layout_width="match_parent"
+            app:fontFamily="@font/quicksand"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_1"
+            android:text="Weight Gain"
+
+            android:textSize="24dp" />
+
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

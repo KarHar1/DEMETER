@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="tell_us_abo">
+            Tell us about
+        </string>
+    <string name="yourself">
+Yourself
+</string>
+    <string name="what_are_yo">
+What are your
+</string>
+    <string name="goals">
+    Goals
+</string>
+    <string name="pick_a_time">
+Pick a timeframe for
+</string>
+    <string name="your_journe">
+your journey
+</string>
+
+</resources>
