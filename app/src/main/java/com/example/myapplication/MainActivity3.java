@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,9 +22,12 @@ public class MainActivity3 extends AppCompatActivity {
     EditText timePeriod;
     TextView resultTextView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main3);
 
         // Initialize views within the onCreate method
@@ -59,13 +64,15 @@ public class MainActivity3 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (resultTextView.toString().isEmpty() || radios.getCheckedRadioButtonId()==-1 ) {
+                    Toast.makeText(MainActivity3.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 // Call the method to calculate date difference
                 calculateDateDifference();
-
-                // Now you can use user1 object with updated values in the next activity
-                /*Intent intent3 = new Intent(MainActivity3.this, MainActivity4.class);
+                Intent intent3 = new Intent(MainActivity3.this, MainActivity4.class);
                 intent3.putExtra("user_data2", user1);
-                startActivity(intent3);*/
+                startActivity(intent3);
             }
         });
     }

@@ -6,11 +6,20 @@ class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
     int gml;
+    double tde, bmi;
     int age, weight, height, daily_calories, exer, goal_weight, days;
     Boolean gender;
     String name;
 
     public User() {
+    }
+
+    public void setTde(double tde) {
+        this.tde = tde;
+    }
+
+    public void setBmi(double bmi) {
+        this.bmi = bmi;
     }
 
     public void setGml(int gml) {
@@ -45,17 +54,17 @@ class User implements Serializable {
         this.goal_weight = goal_weight;
     }
 
-    double countBMT(int age, int weight, int height, boolean gender, int goal_weight) {
+    void countBMT(int age, int weight, int height, boolean gender, int goal_weight) {
         double bmt;
         if (gender) {
             bmt = (10 * weight) + (6.25 * height) - (5 * age) + 5;
         } else {
             bmt = (10 * weight) + (6.25 * height) - (5 * age) - 161;
         }
-        return bmt;
+        setBmi(bmi);
     }
 
-    double countTDE(int exer ,double btm ) {
+    void countTDE(int exer, double btm) {
         double tde = 0;
         switch (exer) {
             case 1:
@@ -71,12 +80,28 @@ class User implements Serializable {
                 tde = btm * 1.725;
                 break;
         }
-        return tde;
+        setTde(tde);
     }
 
+    String coutOverallDailyCalories() {
+        double cal = 0;
+        switch (this.gml) {
+            case 1:
+                cal = (this.tde * 0.75);
+                break;
+            case 2:
+                cal = (this.tde);
+                break;
+            case 3:
+                cal = (this.tde * 0.75 + 500) + ((Math.random()) * 10) + 500;
+                break;
+        }
+        cal /= this.days;
+
+        return String.valueOf(cal);
+    }
 
     double bmi(int w, int h) {
         return w / (h * h);
     }
-
 }

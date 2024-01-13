@@ -1,0 +1,28 @@
+<!-- res/drawable/your_vector_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <vector
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:aapt="http://schemas.android.com/aapt"
+            android:width="120dp"
+            android:height="40dp"
+            android:viewportWidth="120"
+            android:viewportHeight="40"
+            >
+            <group>
+                <clip-path
+                    android:pathData="M0 0H120V40H0V0Z"
+                    />
+                <path
+                    android:pathData="M0 0V40H120V0"
+                    android:fillColor="#0F5132"
+                    />
+                <path
+                    android:pathData="M0 0H120V40H0V0Z"
+                    android:strokeWidth="2"
+                    android:strokeColor="#510F2E"
+                    />
+            </group>
+        </vector>
+    </item>
+</selector>
