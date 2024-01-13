@@ -11,6 +11,10 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
+    public static final String PREFS_NAME = "MyPrefsFile";
+    public static boolean backPressedEnabled = false ;
+    public static final String FIRST_TIME_KEY = "first_time";
+
 
 
     @Override
@@ -51,9 +55,7 @@ public class MainActivity2 extends AppCompatActivity {
                     if (!goalText.isEmpty()) {
                         int goal = Integer.parseInt(goalText);
                         user1.setGoal_weight(user1.weight-goal);
-                        /*if (user1.bmi(user1.weight , user1.height)>18.5 && user1.bmi(user1.weight , user1.height)<26.5 ){
-                            throw new RuntimeException("Ur Bmi is too high or too low , pick another weight goal");
-                        }*/
+
                         Intent intent2 = new Intent(MainActivity2.this, MainActivity3.class);
                         intent2.putExtra("user_data1", user1);
                         startActivity(intent2);
@@ -65,5 +67,23 @@ public class MainActivity2 extends AppCompatActivity {
                 }
             }
         });
+
     }
+    @Override
+    public void onBackPressed() {
+
+        if (backPressedEnabled) {
+            // Call the super method to maintain the default back behavior
+            super.onBackPressed();
+        } else {
+            // Display a Toast message
+            Toast.makeText(MainActivity2.this, "There is no back action", Toast.LENGTH_LONG).show();
+            // You may choose to finish the activity or perform other actions here
+        }
+    }
+
+
 }
+
+
+

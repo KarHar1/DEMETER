@@ -5,16 +5,11 @@ import java.io.Serializable;
 class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    int gml;
     int age, weight, height, daily_calories, exer, goal_weight, days;
-    Boolean gender;
+    boolean gender;
     String name;
 
     public User() {
-    }
-
-    public void setGml(int gml) {
-        this.gml = gml;
     }
 
     public void setName(String name) {
@@ -29,7 +24,7 @@ class User implements Serializable {
         this.weight = weight;
     }
 
-    public void setGender(Boolean gender) {
+    public void setGender(boolean gender) {
         this.gender = gender;
     }
 
@@ -45,38 +40,42 @@ class User implements Serializable {
         this.goal_weight = goal_weight;
     }
 
-    double countBMT(int age, int weight, int height, boolean gender, int goal_weight) {
-        double bmt;
+    public void calculateCalories() {
+        double bmr;
         if (gender) {
-            bmt = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+            bmr = 66.47 + (13.75 * weight) + (5.003 * height) - (6.755 * age);
         } else {
-            bmt = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+            bmr = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age);
         }
-        return bmt;
-    }
 
-    double countTDE(int exer ,double btm ) {
-        double tde = 0;
+        double activityLevelMultiplier;
         switch (exer) {
             case 1:
-                tde = btm * 1.2;
+                activityLevelMultiplier = 1.2;
                 break;
             case 2:
-                tde = btm * 1.375;
+                activityLevelMultiplier = 1.375;
                 break;
             case 3:
-                tde = btm * 1.55;
+                activityLevelMultiplier = 1.55;
                 break;
             case 4:
-                tde = btm * 1.725;
+                activityLevelMultiplier = 1.725;
                 break;
+            case 5:
+                activityLevelMultiplier = 1.9;
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid activity level choice.");
         }
-        return tde;
+
+        double maintenanceCalories = bmr * activityLevelMultiplier;
+        double fatLossCalories = maintenanceCalories - 500; // Aim for a 500 calorie deficit per day for fat loss
+        double extremeFatLossCalories = maintenanceCalories - 1000; // Aim for a 1000 calorie deficit per day for extreme fat loss
+
+        // Set the daily calorie intake values
+        daily_calories = (int) maintenanceCalories;
+        // Assuming fat loss is the goal by default
+        goal_weight = (int) fatLossCalories;
     }
-
-
-    double bmi(int w, int h) {
-        return w / (h * h);
-    }
-
 }

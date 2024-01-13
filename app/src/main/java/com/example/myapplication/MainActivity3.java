@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import static com.example.myapplication.MainActivity2.backPressedEnabled;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +11,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,14 +24,16 @@ public class MainActivity3 extends AppCompatActivity {
     EditText timePeriod;
     TextView resultTextView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main3);
 
         // Initialize views within the onCreate method
         timePeriod = findViewById(R.id.editTextDate);
-        resultTextView = findViewById(R.id.ResultText);
 
         intent = getIntent();
         user1 = (User) intent.getSerializableExtra("user_data1");
@@ -59,35 +65,30 @@ public class MainActivity3 extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Call the method to calculate date difference
-                calculateDateDifference();
+                if (resultTextView.toString().isEmpty() || radios.getCheckedRadioButtonId()==-1 ) {
+                    Toast.makeText(MainActivity3.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-                // Now you can use user1 object with updated values in the next activity
-                /*Intent intent3 = new Intent(MainActivity3.this, MainActivity4.class);
+                Intent intent3 = new Intent(MainActivity3.this, MainActivity4.class);
                 intent3.putExtra("user_data2", user1);
-                startActivity(intent3);*/
+                startActivity(intent3);
             }
         });
     }
 
-    private void calculateDateDifference() {
-        String dateString = timePeriod.getText().toString();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
-        long differenceInDays = 0;
-        try {
-            Date inputDate = dateFormat.parse(dateString);
-            Date currentDate = new Date();
+    @Override
+    public void onBackPressed() {
 
-            long differenceInMillis = currentDate.getTime() - inputDate.getTime();
-            differenceInDays = differenceInMillis / (24 * 60 * 60 * 1000);
-            user1.days = (int) differenceInDays;
-
-            // Display the calculated date difference
-            resultTextView.setText(String.valueOf(user1.days));
-
-        } catch (ParseException e) {
-            resultTextView.setText("Invalid date format");
+        if (backPressedEnabled) {
+            // Call the super method to maintain the default back behavior
+            super.onBackPressed();
+        } else {
+            // Display a Toast message
+            Toast.makeText(MainActivity3.this, "There is no back action", Toast.LENGTH_LONG).show();
+            // You may choose to finish the activity or perform other actions here
         }
     }
+
 }

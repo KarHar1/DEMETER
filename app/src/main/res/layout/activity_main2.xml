@@ -7,6 +7,7 @@
     android:background="#F2FAE9"
     tools:context=".MainActivity2">
 
+
     <ImageView
         android:id="@+id/frame_1"
         android:layout_width="match_parent"
@@ -14,22 +15,17 @@
         android:layout_alignParentLeft="true"
         android:background="@drawable/frame_1"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="27dp" />
 
     <Button
         android:id="@+id/next2"
         android:layout_width="125dp"
         android:layout_height="75dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="284dp"
-        android:layout_marginBottom="0dp"
         android:background="@drawable/next_button"
         android:text="Next"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/edittext_5"
